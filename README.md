@@ -220,28 +220,6 @@ GET movies/_search
   }
 }
 
-# Essa é a bool query, o should e minimal diz que 2 das condições precisam ser verdadeiras. Repare que a query gera score
-GET movies/_search
-{
-  "query": {
-    "bool": {
-      "should": [
-        {"match": {"director" : "Christopher Nolan"}},
-        {"match": {"genres": "Sci-Fi"}},
-        {
-          "range" : {
-            "year" : {
-              "gte" : 2009
-            }
-          }
-        },
-        {"match": {"stars": "Leonardo Dicaprio"}}
-      ],
-      "minimum_should_match": 2
-    }
-  }
-}
-
 # Esse é a query filter, é sim ou não, ou traz ou não traz, e não contribui pro score
 GET movies/_search
 {
