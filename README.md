@@ -1,4 +1,4 @@
-# buscas-rapidas-com-elasticsearch
+# Buscas rápidas com elasticsearch.
 
 <p align="center">
    <img width="70%" src="assets/cover.png">
